@@ -1,4 +1,4 @@
-# sol 1
+# sol 1(Umo)
 
 def removeDuplicates(self, nums):
         """
@@ -8,7 +8,7 @@ def removeDuplicates(self, nums):
     nums[:]=sorted(set(nums))
     return len(nums)
 
-# sol 2
+# sol 2(Aryan)
 
 class Solution:
     def removeDuplicates(self, nums: List[int]) -> int:
