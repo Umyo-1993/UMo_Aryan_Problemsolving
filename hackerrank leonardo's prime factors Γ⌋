@@ -1,0 +1,26 @@
+# ar yan ohio solutioⁿ
+def findNextPrime(n):
+    while True:
+        n+=1
+        nIsPrime = True
+        for i in range(min(n-2,9)):
+            i+=2
+            if n/i == int(n/i):
+                nIsPrime = False
+                break
+        if nIsPrime:
+            return n
+
+def primeCount(n):
+    if n<2:
+        return 0
+    primedivider = 2
+    primefactors = 1
+    primeaccumulation = 2
+    while primeaccumulation < n:
+        primedivider = findNextPrime(primedivider)
+        primeaccumulation*=primedivider
+        primefactors+=1
+    if primeaccumulation>n:
+        primefactors-=1
+    return primefactors
