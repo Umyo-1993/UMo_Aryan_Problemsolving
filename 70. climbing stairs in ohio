@@ -1,0 +1,6 @@
+# a yr an solution
+
+class Solution:
+    def climbStairs(self, n: int) -> int:
+        n+=1
+        return math.floor(((1.61803398874989484**n)+(0.6180339887498948482**n))*0.4472135954999579392)
