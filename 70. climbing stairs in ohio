@@ -4,3 +4,15 @@ class Solution:
     def climbStairs(self, n: int) -> int:
         n+=1
         return math.floor(((1.61803398874989484**n)+(0.6180339887498948482**n))*0.4472135954999579392)
+
+# a yr an solution (but its recursive (rare))
+
+class Solution:
+    def climbStairs(self, n: int) -> int:
+        return Solution.addFibbonaci(n)[1]
+    def addFibbonaci(currentiteration):
+        if currentiteration == 0:
+            return 0, 1
+        else:
+            returninfo = Solution.addFibbonaci(currentiteration-1)
+            return returninfo[1], returninfo[0]+returninfo[1]
