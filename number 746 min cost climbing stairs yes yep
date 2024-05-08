@@ -1,4 +1,4 @@
-# aryan sfahifdashk solution 60 ms time complexity
+# aryan sfahifdashk solution 60 ms time complexity 16.71 mb size
 
 class Solution:
     def minCostClimbingStairs(self, cost: List[int]) -> int:
