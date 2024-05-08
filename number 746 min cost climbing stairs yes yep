@@ -1,0 +1,8 @@
+# aryan sfahifdashk solution 60 ms time complexity
+
+class Solution:
+    def minCostClimbingStairs(self, cost: List[int]) -> int:
+        minsteptable = [cost[0], cost[1]]
+        for i in range(2, len(cost)):
+            minsteptable.append(cost[i] + min(minsteptable[i-1], minsteptable[i-2]))
+        return min(minsteptable[-1], minsteptable[-2])
