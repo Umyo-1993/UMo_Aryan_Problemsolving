@@ -1,0 +1,13 @@
+# aryanhasdkjasjkldjksak solution 34 ms 11.64 mb
+
+class Solution:
+    def rob(self, nums: List[int]) -> int:
+        length = len(nums)
+        if length < 4:
+            return max(nums)
+        profit1 = [nums[0], max(nums[0], nums[1])]
+        profit2 = [0, nums[1]]
+        for i in range(2, length-1):
+            profit1.append(max(nums[i] + profit1[i-2], profit1[i-1]))
+            profit2.append(max(nums[i] + profit2[i-2], profit2[i-1]))
+        return max(max(profit1), max(nums[-1] + profit2[-2], profit2[-1]))
