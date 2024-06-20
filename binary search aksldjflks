@@ -1,0 +1,17 @@
+# 183 ms
+
+class Solution:
+    def search(self, nums: List[int], target: int) -> int:
+        l = len(nums)
+        t = math.floor(l*0.5)
+        if nums[t] == target:
+            return t
+        elif nums[t] < target:
+            for i in range(t, l):
+                if nums[i] == target:
+                    return i
+        else:
+            for i in range(t):
+                if nums[i] == target:
+                    return i
+        return -1
